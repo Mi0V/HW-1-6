@@ -9,24 +9,43 @@ namespace Zadanie_4_5_6
 {
     class Web_sait
     {
+        public string Name;
+        public string Url;
+        public string ip;
+        public string opisanie;
 
-        static void Name()
-        {
+        public Web_sait() { }
 
-            WriteLine("***********MVideo**********");
-        }
-        static void Reference()
+        public void Enter()
         {
-            WriteLine("//http.MVideo.ru");
+            WriteLine("введите данные сайта для вывода пользователю");
+            Write("Название ");
+            Name = ReadLine();
+            Write("Ссылку ");
+            Url = ReadLine();
+            Write("ip ");
+            ip = ReadLine();
+            Write("Описание сайта ");
+            opisanie = ReadLine();
         }
-        static void ip()
+        public void Names()
         {
-            WriteLine("191.168.25.0.1");
+            
+            WriteLine($"Название сайти: {Name}");
+
+        }
+        public void Reference()
+        {
+            WriteLine($"Ссылка: {Url}");
+        }
+        public void ipp()
+        {
+            WriteLine($"ip: {ip}");
         }
 
-        static void opisanie()
+        public void opisaniee()
         {
-            WriteLine("Официальный сайт магазина MVideo");
+            WriteLine($"Описание: {opisanie}");
         }
 
     }
@@ -39,10 +58,11 @@ namespace Zadanie_4_5_6
         {
             Web_sait web;
             web = new Web_sait();
-            web.Name();
+            web.Enter();
+            web.Names();
             web.Reference();
-            web.ip();
-            web.opisanie();
+            web.ipp();
+            web.opisaniee();
               
         }
     }
